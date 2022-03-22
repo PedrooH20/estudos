@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background: green;
+            color: yellow;
+            font: normal 16pt Arial;
+        }
+        .container {
+            position: relative;
+            margin-top: 10vh;
+        }
+        .botao {
+            background: yellow;
+            color: green;
+            font: normal 12pt Arial;
+            border-radius: 5px;
+        }
+
+        .texto {
+            background: yellow;
+            color: green;
+            border-radius: 5px;
+            font: normal 12pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Nacionalidade</h2>
+
+        De qual país você é? <input type="text" class="texto" name="text1" id="tex1">
+
+        <input type="button" class="botao" value="Confirma" onclick="calc()">
+
+        <div id="res">
+
+        </div>
+    </div>
+    <script>
+
+        function calc() {
+            var pais = document.getElementById('tex1')
+            var res = document.getElementById('res')
+            var pais1 = String(pais.value)
+
+            if (pais1 == 'Brasil') {
+                res.innerHTML = `Você é Brasileiro!`
+            } else {
+                res.innerHTML += `Você não é Brasileiro =(`
+            }
+            
+
+        }
+
+    </script>
+
+</body>
+
+</html>
